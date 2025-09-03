@@ -159,8 +159,8 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleY="1.2"
                 android:scaleX="1.2"
+                android:scaleY="1.2"
                 android:src="@drawable/ellipse_shape" />
 
             <ImageView
@@ -186,12 +186,11 @@
         android:layout_marginBottom="5dp"
         android:gravity="center_vertical"
         android:paddingHorizontal="16dp"
-
         >
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/ibmplex_bold"
             android:gravity="center_vertical"
@@ -200,19 +199,35 @@
             android:textFontWeight="600"
             android:textSize="20sp" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#00FFFFFF"
-            android:drawableEnd="@drawable/arrow_right_icon"
-            android:elevation="0dp"
-            android:fontFamily="@font/ibmplex_medium"
-            android:stateListAnimator="@null"
-            android:text="View all"
-            android:textAllCaps="false"
-            android:textColor="#03578A"
-            android:textFontWeight="500"
-            android:textSize="12sp" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:padding="8dp"
+            android:background="@drawable/view_all_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="View all"
+                android:textAllCaps="false"
+                android:textColor="#03578A"
+                android:textFontWeight="500"
+                android:includeFontPadding="false"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/arrow_right_icon" />
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 
