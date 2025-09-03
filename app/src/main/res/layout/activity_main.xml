@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="2dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/jerry_avatar"
+            app:shapeAppearanceOverlay="@style/RoundCornerImage12" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi, Jerry 👋🏻" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Which Tom do you want to buy?"
+                android:textColor="#A5A6A4"
+                android:textFontWeight="400" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <ImageButton
+                style="@style/notification_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/notification_icon_bg"
+                android:clipToOutline="false"
+                android:src="@drawable/notification_icon" />
+
+            <TextView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="top|end"
+                android:background="@drawable/bage_bg"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:translationX="1.5dp"
+                android:translationY="-2dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_bg"
+            android:drawableStart="@drawable/search_normal"
+            android:drawablePadding="8dp"
+            android:hint="Search about tom ..."
+            android:padding="12dp"
+            android:textColor="#969799" />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/filter_icon_bg"
+            android:padding="12dp"
+            android:src="@drawable/filter_horizontal_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/banner_bg"
+        android:clipChildren="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/ibmplex_semi_bold"
+                android:text="Buy 1 Tom and get 2 for free"
+                android:textColor="@color/white"
+                android:textFontWeight="600"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/ibmplex_regular"
+                android:text="Adopt Tom! (Free Fail-Free \nGuarantee)"
+                android:textColor="#CCFFFFFF"
+                android:textFontWeight="400"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:clipChildren="false">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleY="1.2"
+                android:scaleX="1.2"
+                android:src="@drawable/ellipse_shape" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom|end"
+                android:scaleType="centerCrop"
+                android:scaleX="1.2"
+                android:scaleY="1.2"
+                android:src="@drawable/tom_banner_picture"
+                android:translationX="-17dp"
+                android:translationY="-11dp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/cheap_tom_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/ibmplex_bold"
+            android:gravity="center_vertical"
+            android:text="Cheap tom section"
+            android:textColor="#1F1F1E"
+            android:textFontWeight="600"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:drawableEnd="@drawable/arrow_right_icon"
+            android:elevation="0dp"
+            android:fontFamily="@font/ibmplex_medium"
+            android:stateListAnimator="@null"
+            android:text="View all"
+            android:textAllCaps="false"
+            android:textColor="#03578A"
+            android:textFontWeight="500"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:scrollbars="none">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:columnCount="2"
+                android:paddingTop="20dp"
+                android:useDefaultMargins="true">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="28dp"
+                    android:background="@drawable/tom_bg"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="-25dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/tom1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/ibmplex_semi_bold"
+                        android:gravity="center_horizontal"
+                        android:text="Sport Tom"
+                        android:textAlignment="center"
+                        android:textFontWeight="600"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ibmplex_regular"
+                        android:gravity="center_horizontal"
+                        android:text="He runs 1 meter... trips over his boot.\n"
+                        android:textAlignment="center"
+                        android:textColor="#969799"
+                        android:textFontWeight="400"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/to_card_button_bg"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingEnd="4dp"
+                                android:src="@drawable/money_bag_icon"
+
+                                />
+
+                            <TextView
+                                style="@style/action_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:background="@drawable/line_through"
+                                android:gravity="center_vertical"
+                                android:text="5" />
+
+                            <TextView
+                                style="@style/action_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="3 cheeses"
+                                android:textAllCaps="false" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="8dp"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/add_to_cart_icon" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="28dp"
+                    android:background="@drawable/tom_bg"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="-25dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/tom2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/ibmplex_semi_bold"
+                        android:gravity="center_horizontal"
+                        android:text="Tom the lover"
+                        android:textAlignment="center"
+                        android:textFontWeight="600"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ibmplex_regular"
+                        android:gravity="center_horizontal"
+                        android:text="He loves one-sidedly...
+                         and is beaten by the other side."
+                        android:textAlignment="center"
+                        android:textColor="#969799"
+                        android:textFontWeight="400"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/to_card_button_bg"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingEnd="4dp"
+                                android:src="@drawable/money_bag_icon"
+
+                                />
+
+                            <TextView
+                                style="@style/action_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:background="@drawable/line_through"
+                                android:gravity="center_vertical"
+                                android:text="" />
+
+                            <TextView
+                                style="@style/action_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="5 cheeses"
+                                android:textAllCaps="false" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="8dp"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/add_to_cart_icon" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="28dp"
+                    android:background="@drawable/tom_bg"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="-25dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/tom3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/ibmplex_semi_bold"
+                        android:gravity="center_horizontal"
+                        android:text="Tom the bomb"
+                        android:textAlignment="center"
+                        android:textFontWeight="600"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ibmplex_regular"
+                        android:gravity="center_horizontal"
+                        android:text="He blows himself up before Jerry can catch him."
+                        android:textAlignment="center"
+                        android:textColor="#969799"
+                        android:textFontWeight="400"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/to_card_button_bg"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingEnd="4dp"
+                                android:src="@drawable/money_bag_icon"
+
+                                />
+
+                            <TextView
+                                style="@style/action_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:background="@drawable/line_through"
+                                android:gravity="center_vertical"
+                                android:text="" />
+
+                            <TextView
+                                style="@style/action_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="10 cheeses"
+                                android:textAllCaps="false" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="8dp"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/add_to_cart_icon" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="28dp"
+                    android:background="@drawable/tom_bg"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="-25dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/tom4" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/ibmplex_semi_bold"
+                        android:gravity="center_horizontal"
+                        android:text="Spy Tom"
+                        android:textAlignment="center"
+                        android:textFontWeight="600"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ibmplex_regular"
+                        android:gravity="center_horizontal"
+                        android:text="Disguises itself as a table.\n"
+                        android:textAlignment="center"
+                        android:textColor="#969799"
+                        android:textFontWeight="400"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/to_card_button_bg"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingEnd="4dp"
+                                android:src="@drawable/money_bag_icon"
+
+                                />
+
+                            <TextView
+                                style="@style/action_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:background="@drawable/line_through"
+                                android:gravity="center_vertical"
+                                android:text="" />
+
+                            <TextView
+                                style="@style/action_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="12 cheeses"
+                                android:textAllCaps="false" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="8dp"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/add_to_cart_icon" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="28dp"
+                    android:background="@drawable/tom_bg"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="-25dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/tom5" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/ibmplex_semi_bold"
+                        android:gravity="center_horizontal"
+                        android:text="Frozen Tom"
+                        android:textAlignment="center"
+                        android:textFontWeight="600"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ibmplex_regular"
+                        android:gravity="center_horizontal"
+                        android:text="He was chasing Jerry, he froze after the first look\n"
+                        android:textAlignment="center"
+                        android:textColor="#969799"
+                        android:textFontWeight="400"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/to_card_button_bg"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingEnd="4dp"
+                                android:src="@drawable/money_bag_icon"
+
+                                />
+
+                            <TextView
+                                style="@style/action_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:background="@drawable/line_through"
+                                android:gravity="center_vertical"
+                                android:text="" />
+
+                            <TextView
+                                style="@style/action_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="10 cheeses"
+                                android:textAllCaps="false" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="8dp"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/add_to_cart_icon" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="28dp"
+                    android:background="@drawable/tom_bg"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="-25dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/tom6" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/ibmplex_semi_bold"
+                        android:gravity="center_horizontal"
+                        android:text="Sleeping Tom"
+                        android:textAlignment="center"
+                        android:textFontWeight="600"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ibmplex_regular"
+                        android:gravity="center_horizontal"
+                        android:text="He doesn't chase anyone, he just snores in stereo.\n"
+                        android:textAlignment="center"
+                        android:textColor="#969799"
+                        android:textFontWeight="400"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/to_card_button_bg"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingEnd="4dp"
+                                android:src="@drawable/money_bag_icon"
+
+                                />
+
+                            <TextView
+                                style="@style/action_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:background="@drawable/line_through"
+                                android:gravity="center_vertical"
+                                android:text="" />
+
+                            <TextView
+                                style="@style/action_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="10 cheeses"
+                                android:textAllCaps="false" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="8dp"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/add_to_cart_icon" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </GridLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Tom_jerry_xml" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Tom_jerry_xml" parent="Base.Theme.Tom_jerry_xml" />
+    <style name="action_text_style" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/ibmplex_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+</resources>
