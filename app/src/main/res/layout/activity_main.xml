@@ -305,7 +305,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/to_card_button_bg"
                             android:clickable="true"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
                             android:paddingHorizontal="8dp">
 
                             <ImageView
@@ -401,7 +401,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/to_card_button_bg"
                             android:clickable="true"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
                             android:paddingHorizontal="8dp">
 
                             <ImageView
@@ -496,7 +496,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/to_card_button_bg"
                             android:clickable="true"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
                             android:paddingHorizontal="8dp">
 
                             <ImageView
@@ -591,7 +591,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/to_card_button_bg"
                             android:clickable="true"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
                             android:paddingHorizontal="8dp">
 
                             <ImageView
@@ -686,7 +686,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/to_card_button_bg"
                             android:clickable="true"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
                             android:paddingHorizontal="8dp">
 
                             <ImageView
@@ -781,7 +781,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/to_card_button_bg"
                             android:clickable="true"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
                             android:paddingHorizontal="8dp">
 
                             <ImageView
