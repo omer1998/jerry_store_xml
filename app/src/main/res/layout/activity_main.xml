@@ -101,6 +101,7 @@
             android:drawablePadding="8dp"
             android:hint="Search about tom ..."
             android:padding="12dp"
+            android:textSize="16sp"
             android:textColor="#969799" />
 
         <ImageButton
